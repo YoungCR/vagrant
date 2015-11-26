@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+    ServerAdmin webmaster@localhost
+    ServerName vmtest.dev
+    Alias /static /vagrant/public
+    <Directory /vagrant/public>
+        Options Indexes FollowSymLinks Includes
+        AllowOverride All
+        Require all granted
+    </Directory>
+    DocumentRoot /vagrant/vmtest/public
+    <Directory /vagrant/vmtest/public>
+        Options Indexes FollowSymLinks Includes
+        AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
